@@ -4,7 +4,6 @@
  * ========================================================================= */
 
 #include <stddef.h>
-#include <stdio.h>
 #include "Sort.h"
 
 static void swap(int *array, int a, int b){
@@ -33,12 +32,6 @@ static void quicksort(int *array, int p, int r){
         quicksort(array, p, position_pivot-1);
         quicksort(array, position_pivot+1, r);
     }
-}
-
-static void affichage(int *array, int length){
-    for(int i=0; i<length; i++)
-        printf("%d\t", array[i]);
-    printf("\n\n");
 }
 
 void sort(int *array, size_t length){
