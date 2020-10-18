@@ -4,15 +4,7 @@
  * ========================================================================= */
 
 #include <stddef.h>
-#include <stdio.h>
 #include "Sort.h"
-
-static void affichage(int *array, int length)
-{
-    for (int i = 0; i < length; i++)
-        printf("%d\t", array[i]);
-    printf("\n\n");
-}
 
 static void swap(int *array, int a, int b)
 {
@@ -50,15 +42,11 @@ static void build_max_heap(int *array, int length){
 
 
 void sort(int *array, size_t length){
-    affichage(array, length);
-    int i = length;
 
     build_max_heap(array, length-1);
-    affichage(array, length);
     while(length>=1){
         swap(array, length-1, 0);
         length--;
         max_heapify(array, 0, length-1);
     }
-    affichage(array, i);
 }

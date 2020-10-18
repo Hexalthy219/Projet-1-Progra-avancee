@@ -4,7 +4,7 @@
 #include "Array.h"
 #include "Sort.h"
 
-static const size_t ARRAY_LENGTH = 1000;
+static const size_t ARRAY_LENGTH = 100000;
 
 /* Prototypes */
 
