@@ -14,9 +14,8 @@ static void swap(int *array, int a, int b)
 }
 
 void sort(int *array, size_t length){
-    size_t i=0, m, x=0;
+    size_t i=0, m;
     while(i<length){
-        x++;
         m=0;
         for(size_t j=0; j<length; j++){
             if(array[i]>array[j])
