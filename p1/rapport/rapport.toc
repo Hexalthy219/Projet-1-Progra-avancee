@@ -1,0 +1,7 @@
+\babel@toc {french}{}
+\contentsline {section}{\numberline {1}\textbf {Introduction}}{3}%
+\contentsline {section}{\numberline {2}\textbf {Algorithmes vus au cours}}{3}%
+\contentsline {subsection}{\numberline {2.1}Résultats empiriques de temps d'exécution}{3}%
+\contentsline {subsection}{\numberline {2.2}Analyse des tests en fonction des complexités théoriques des différents algorithmes}{3}%
+\contentsline {section}{\numberline {3}\textbf {PlaceSort}}{4}%
+\contentsline {subsection}{\numberline {3.1}Pseudo-code}{4}%
