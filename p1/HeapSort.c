@@ -23,7 +23,17 @@ static void swap(int *array, int a, int b){
     array[b] = temp;
 }
 
-
+/**
+ * \fn max_heapify(int *array, int i, int length)
+ * \brief Permet de réparer le noeud d'un arbe dont le père est l'élément à la case i du tableau
+ * 
+ * \param array un pointeur vers un tableau d'entier qui est l'arbre à réparer
+ * \param i un entier étant l'indice du noeud à réparer
+ * \param length un entier étant la longueur maximal du tableau
+ * 
+ * \pre array init && i>=0 && length>1
+ * \post Le noeud à la position i a été réparé
+ */
 static void max_heapify(int *array, int i, int length){
     int left = i*2+1;
     int right = i*2+2;
@@ -39,7 +49,16 @@ static void max_heapify(int *array, int i, int length){
         max_heapify(array, largest, length);
     }
 }
-
+/**
+ * \fn build_max_heap(int *array, int length)
+ * \brief Transforme le tableau array en arbre si c'est pas déjà le cas
+ * 
+ * \param array un pointeur vers le tableau d'entier qui doit être transformé en arbre
+ * \param length un entier étant la longueur maximal du tableau
+ * 
+ * \pre array init && length>1
+ * \post Le tableau a été transformé en arbre
+ */
 static void build_max_heap(int *array, int length){
     int i = length;
     int fin = 1;
