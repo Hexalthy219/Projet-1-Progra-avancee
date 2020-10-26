@@ -16,7 +16,6 @@
  * 
  * \pre array[a] = array[a]_init && array[b] = array[b]_init
  * \post array[a] = array[b]_init && array[b] = array[a]_init
- * 
  */
 static void swap(int *array, int a, int b){
     int temp = array[a];

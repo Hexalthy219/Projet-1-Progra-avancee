@@ -77,17 +77,17 @@ RecSort.o: RecSort.c
 rapport:all_rapport clean_log_aux
 
 all_rapport:
-	cd ../rapport && pdflatex tad-RusseCyril.tex
+	cd rapport && pdflatex *.tex
 
 clean_log_aux:
-	cd ../rapport && rm -f tad-RusseCyril.aux tad-RusseCyril.log tad-RusseCyril.toc
+	cd rapport && rm -f *.aux *.log *.toc
 
 clean_rapport: clean_log_aux
-	cd ../rapport && rm -f tad-RusseCyril.pdf
+	cd rapport && rm -f *.pdf
 
 #création archive
 archive:
-	cd .. && tar -zcvf demineur_01.tar.gz source rapport doc
+	cd .. && tar -zcvf sorting-groupe1.tar.gz p1
 
 #supp fichiers objets + executable
 clean:
