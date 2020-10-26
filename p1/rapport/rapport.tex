@@ -127,50 +127,55 @@
     \begin{enumerate}
         \item InsertionSort:
         \begin{itemize}
-            \item croissant : L'InsertionSort n'est pas réputé 
-            pour être un bon algorithme de tri pour des tableaux de grandes 
-            tailles mais il a pour seul 
-            avantage d'être très éfficace dans les cas où le tableau 
-            est déjà trié ou presque. Ce cas croissant correspond donc 
-            au meilleur cas de tableau pour cet algorithme où sa 
-            complexité théorique est $\Theta (n)$. Si nous observons les 
-            données de notre tableau, nous pouvons mettre en evidence le 
-            fait que lorsque qu'un facteur 10 sépare la taille des tableaux 
-            nous retrouvons effectivement ce facteur 10 au niveau du temps 
-            d'exécution dû à notre complexité $\Theta (n)$. Par exemple, pour des tableaux de taille $10^3$ et 
-            $10^4$, nous avons respectivement, en moyenne, 0.000146s et 0.001397s. 0.00146 se rapproche 
-            très fortement de 0.001397.
-             
-            \item aléatoire : Le cas aléatoire correspond à un cas moyen pour 
-            cet algorithme qui est $\Theta (n^2)$. Nous observons bien entre les 
-            tableaux de tailles $10^3$ à $10^4$ ou de $10^4$ à $10^5$ un facteur $10^2$ séparant 
-            nos moyennes temporelles.
+            \item croissant : 
+            Nous retrouvons entre $10^3$ et $10^4$ un facteur 8,59 et entre 
+            $10^4$ et $10^5$ un facteur 9.57. En moyenne, cela nous fait 9.08$\simeq 10$.
+            La complexité $\Theta(n)$ est vérifiée.
+            \item aléatoire : 
+            Nous retrouvons entre $10^3$ et $10^4$ un facteur 35.66 et entre 
+            $10^4$ et $10^5$ un facteur 96.21. En moyenne, cela nous fait 65.93. Nous 
+            nous rapprochons bel et bien du facteur $10^2$ attendu, d'autant plus notable 
+            entre les tableaux $10^4 et 10^5$.
+            La complexité $\Theta(n^2)$ est vérifiée.
         \end{itemize}
         \item QuickSort :
         \begin{itemize}
-            \item croissant : Le cas croissant est un des pires cas 
-            pour le QuickSort. En effet, celui-ci prend le dernier élément 
-            du tableau et l'utilise comme valeur de pivot. Malheureusement, 
-            le but de cet algorithme est de diviser le plus possible le tableau 
-            afin de réduire la tableau en plus petit tableau à gérer, hors 
-            dans le cas du cas croissant cette valeur de pivot sera toujours 
-            la valeur la plus grande par rapport aux autres et ne permettra 
-            pas de séparer le tableau en plusieurs tableaux qui permettrait 
-            d'avoir la meilleure complexité possible pour des algorithmes de tri et notamment 
-            celui-ci $\Theta (n*log(n))$. Dans ce cas-ci, la complexité 
-            est $\Theta(n^2)$. Comme pour le cas aléatoire de l'InsertionSort, 
-            un facteur $10^2$ sépare les moyennes de temps d'exécution 
-            entre des tableaux de taille 10 fois plus grand.
+            \item croissant : 
+            Nous retrouvons entre $10^3$ et $10^4$ un facteur 93.62 et entre 
+            $10^4$ et $10^5$ un facteur 29. En moyenne, cela nous fait 61.31. Nous 
+            nous rapprochons bel et bien du facteur $10^2$ attendu, d'autant plus notable 
+            entre les tableaux $10^4$ et $10^5$.
+            La complexité $\Theta(n^2)$, étant donné que nous sommes dans le pire 
+            cas pour le QuickSort qui va toujours avoir sa valeur de pivot qui 
+            ne permettra pas de "diviser pour mieux régner", est vérifiée.
 
-            \item aléatoire :
+            \item aléatoire : 
+            Nous retrouvons entre $10^3$ et $10^4$ un facteur 4.07 et entre 
+            $10^4$ et $10^5$ un facteur 29.29. En moyenne, cela nous fait 16.68. Nous 
+            nous rapprochons bel et bien du facteur $10log(10)$ attendu, d'autant plus notable 
+            entre les tableaux $10^4$ et $10^5$.
+            La complexité $\Theta(n*log(n))$ est vérifiée.
         \end{itemize}
         \item HeapSort :
         \begin{itemize}
-            \item croissant:
-            \item aléatoire:
+            \item croissant : 
+            Nous retrouvons entre $10^3$ et $10^4$ un facteur 5.79 et entre 
+            $10^4$ et $10^5$ un facteur 7.11. En moyenne, cela nous fait 6.45.
+            Théoriquement la complexité du heapsort est $\Theta(n*log(n))$, 
+            nous nous en rapprochons dans ce cas-ci, les résultats sont mêmes meilleurs que ceux 
+            attendus.
+            \item aléatoire : 
+            Nous retrouvons entre $10^3$ et $10^4$ un facteur 12.35 et entre 
+            $10^4$ et $10^5$ un facteur 2.77. En moyenne, cela nous fait 7.56.
+            La complexité $\Theta(n*log(n))$ est vérifiée.
+            Cet algorithme est de loin le plus performant quelque soit le cas, 
+            il respecte sa complexité théorique de $\Theta(n*log(n))$ quelque soit 
+            le cas et est même plus efficace que les autres algorithmes ayant 
+            cette même complexité.
         \end{itemize}
     \end{enumerate}
 
+    \subsection{}
 
     \section{\textbf{PlaceSort}}
     \subsection{Pseudo-code}

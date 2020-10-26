@@ -4,7 +4,7 @@
 #include "Array.h"
 #include "Sort.h"
 
-static const size_t ARRAY_LENGTH = 10;
+static const size_t ARRAY_LENGTH = 10000;
 
 /* Prototypes */
 
@@ -51,7 +51,7 @@ int main(void)
     printf("Sorted     | %f\n", sec);
     free(sorted);
 
-    // -------------------------- Decreasing array -------------------------- //
+    // // -------------------------- Decreasing array -------------------------- //
     // int* decreasing = createDecreasingArray(ARRAY_LENGTH);
     // if (!decreasing)
     // {
