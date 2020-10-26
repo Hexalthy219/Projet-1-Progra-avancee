@@ -4,7 +4,7 @@
 #include "Array.h"
 #include "Sort.h"
 
-static const size_t ARRAY_LENGTH = 10000;
+static const size_t ARRAY_LENGTH = 1000;
 
 /* Prototypes */
 
@@ -52,16 +52,16 @@ int main(void)
     free(sorted);
 
     // // -------------------------- Decreasing array -------------------------- //
-    // int* decreasing = createDecreasingArray(ARRAY_LENGTH);
-    // if (!decreasing)
-    // {
-    //     fprintf(stderr, "Could not created decreasing array. Aborting...\n");
-    //     return EXIT_FAILURE;
-    // }
+    int* decreasing = createDecreasingArray(ARRAY_LENGTH);
+    if (!decreasing)
+    {
+        fprintf(stderr, "Could not created decreasing array. Aborting...\n");
+        return EXIT_FAILURE;
+    }
 
-    // sec = cpuTimeUsedToSort(decreasing, ARRAY_LENGTH);
-    // printf("Decreasing | %f\n", sec);
-    // free(decreasing);
+    sec = cpuTimeUsedToSort(decreasing, ARRAY_LENGTH);
+    printf("Decreasing | %f\n", sec);
+    free(decreasing);
 
     // ---------------------------- Random array ---------------------------- //
     int* random = createRandomArray(ARRAY_LENGTH);

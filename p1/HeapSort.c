@@ -6,12 +6,23 @@
 #include <stddef.h>
 #include "Sort.h"
 
-static void swap(int *array, int a, int b)
-{
+/**
+ * \fn swap(int *array, int a, int b)
+ * \brief permute les éléments de array se trouvant aux indices a et b
+ * 
+ * \param array un pointeur vers un tableau d'entier dans lequel faire les permutations
+ * \param a un entier étant le premier indice des éléments à permuter
+ * \param b un entier étant le deuxième indice des éléments à permuter
+ * 
+ * \pre array[a] = array[a]_init && array[b] = array[b]_init
+ * \post array[a] = array[b]_init && array[b] = array[a]_init
+ */
+static void swap(int *array, int a, int b){
     int temp = array[a];
     array[a] = array[b];
     array[b] = temp;
 }
+
 
 static void max_heapify(int *array, int i, int length){
     int left = i*2+1;
@@ -42,6 +53,9 @@ static void build_max_heap(int *array, int length){
 
 
 void sort(int *array, size_t length){
+    if(!array||length<2)
+        return;
+
 
     build_max_heap(array, length-1);
     while(length>=1){
